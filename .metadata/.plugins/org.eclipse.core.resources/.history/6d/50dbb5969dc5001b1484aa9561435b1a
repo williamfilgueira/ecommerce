@@ -1,0 +1,9 @@
+package org.serratec.backand.finalWork.controllers;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RequestMapping
+@RequestController
+public class Clients_Controller {
+
+}

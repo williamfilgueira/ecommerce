@@ -1,0 +1,14 @@
+package org.serratec.backand.finalWork.mapper;
+
+import org.serratec.backand.finalWork.DTO.PedidoDto;
+import org.serratec.backand.finalWork.models.PedidoEntity;
+import org.springframework.stereotype.Component;
+
+@Component
+public class PedidoMapper {
+
+	public PedidoEntity toEntity(PedidoDto dto) {
+		
+	}
+	
+}

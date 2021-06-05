@@ -1,0 +1,29 @@
+package org.serratec.backand.finalWork.models;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+
+@Entity
+public class PedidoEntity {
+
+	@Id // gerando id e passando sua criação automaticamente pelo BDD
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long Id;
+	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Double n_pedido;
+	
+	@ManyToMany
+	@JoinTable(name="produto_pedido")
+	private List<ProdutoEntity> produtos_pedido;
+	
+	
+	
+}

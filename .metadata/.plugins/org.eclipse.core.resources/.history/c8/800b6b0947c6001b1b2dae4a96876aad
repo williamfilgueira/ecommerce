@@ -1,0 +1,34 @@
+package org.serratec.backand.finalWork.mapper;
+
+import org.serratec.backand.finalWork.DTO.FuncionarioDto;
+import org.serratec.backand.finalWork.models.FuncionarioEntity;
+import org.springframework.stereotype.Component;
+
+@Component
+public class FuncionarioMapper {
+
+	
+	public FuncionarioEntity toEntity(FuncionarioDto dto) {
+		FuncionarioEntity entity = new FuncionarioEntity();
+		entity.setNome(dto.getNome());
+		entity.setData_nascimento(dto.getData_nascimento());
+		entity.setEmail(dto.getEmail());
+		entity.setEnderocoId(dto.getEnderocoId());
+		entity.setSenha(dto.getSenha());
+		entity.setTelefone(dto.getTelefone());
+		return entity;
+	}
+	
+	public FuncionarioDto toDto(FuncionarioEntity cliente) {
+		FuncionarioDto dto = new FuncionarioDto();
+		dto.setNome(cliente.getNome());
+		dto.setData_nascimento(cliente.getData_nascimento());
+		dto.setEmail(cliente.getEmail());
+		dto.setEnderocoId(cliente.getEnderocoId());
+		dto.setSenha(cliente.getSenha());
+		dto.setTelefone(cliente.getTelefone());
+		return dto;
+	}
+	
+	
+}

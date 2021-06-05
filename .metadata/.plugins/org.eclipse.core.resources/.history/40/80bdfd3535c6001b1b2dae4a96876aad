@@ -1,0 +1,31 @@
+package org.serratec.backand.finalWork.mapper;
+
+import org.serratec.backand.finalWork.DTO.ClienteDto;
+import org.serratec.backand.finalWork.DTO.EnderecoDto;
+import org.serratec.backand.finalWork.models.ClienteEntity;
+import org.serratec.backand.finalWork.models.EnderecoEntity;
+
+public class EnderecoMapper {
+
+	public EnderecoEntity toEntity(EnderecoDto dto) {
+		EnderecoEntity entity = new EnderecoEntity();
+		entity.set(dto.getBairro());
+		return entity;
+	}
+	
+	public EnderecoDto toDto(EnderecoEntity cliente) {
+		ClienteDto dto = new ClienteDto();
+		dto.setNome(cliente.getNome());
+		dto.setCpf(cliente.getCpf());
+		dto.setData_nascimento(cliente.getData_nascimento());
+		dto.setEmail(cliente.getEmail());
+		dto.setEnderocoId(cliente.getEnderocoId());
+		dto.setTelefone(cliente.getTelefone());
+		dto.setSenha(cliente.getSenha());
+		return dto;
+	}
+	
+	
+	
+	
+}

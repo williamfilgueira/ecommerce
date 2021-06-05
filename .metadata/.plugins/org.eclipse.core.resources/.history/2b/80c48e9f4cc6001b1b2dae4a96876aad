@@ -1,0 +1,5 @@
+package org.serratec.backand.finalWork.repositories;
+
+public interface FuncionarioRepository {
+
+}

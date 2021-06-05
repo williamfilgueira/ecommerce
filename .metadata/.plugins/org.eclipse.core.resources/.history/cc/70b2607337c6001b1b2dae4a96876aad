@@ -1,0 +1,5 @@
+package org.serratec.backand.finalWork.mapper;
+
+public class PedidoMapper {
+
+}

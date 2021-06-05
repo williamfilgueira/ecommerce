@@ -1,0 +1,21 @@
+package org.serratec.backand.finalWork.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class PedidoEntity {
+
+	@Id // gerando id e passando sua criação automaticamente pelo BDD
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long Id;
+	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Double n_pedido;
+	
+	
+	
+	
+}

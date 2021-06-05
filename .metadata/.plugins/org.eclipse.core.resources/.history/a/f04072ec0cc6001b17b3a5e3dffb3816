@@ -1,0 +1,31 @@
+package org.serratec.backand.finalWork.DTO;
+
+import javax.validation.constraints.Size;
+
+import com.sun.istack.NotNull;
+
+public class EndereçoDto {
+
+	@NotNull
+	@Size(min=8)
+	private String cep;
+	
+	@NotNull
+	@Size(min=8, max=100)
+	private String rua;
+	 
+	@NotNull
+	@Size(min=8, max=100)
+	private String bairro;
+	
+	@NotNull
+	private Integer numero;
+	
+	@NotNull
+	@Size(min=8, max=250)
+	private String complemento;
+	
+	@NotNull
+	@Size(min=8, max=20)
+	private String estado;
+}

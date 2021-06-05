@@ -1,0 +1,5 @@
+package org.serratec.backand.finalWork.controller;
+
+public class PeopleController {
+
+}

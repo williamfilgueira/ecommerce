@@ -1,0 +1,114 @@
+package org.serratec.backand.finalWork.models;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
+
+import com.sun.istack.NotNull;
+
+@Entity
+public class ProdutoEntity {
+
+	@Id // gerando id e passando sua criação automaticamente pelo BDD
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@ManyToOne
+	private Long Id;
+	
+	@NotNull
+	@Size(min = 5, max = 50)
+	private String nome;
+	
+	@NotNull
+	@Size(min = 5, max = 100)
+	private String descricao;
+	
+	@NotNull
+	private Double preco;
+	
+	@NotNull
+	private Integer qtd_estoque;
+	
+	@Past
+	private LocalDate date;
+	
+//	private Byte imagem;
+	
+	@ManyToOne
+	@JoinColumn(name = "categoria_id", referencedColumnName = "id")
+	private CategoriaEntity categoria;
+
+	
+	
+	public Long getId() {
+		return Id;
+	}
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public Double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(Double preco) {
+		this.preco = preco;
+	}
+
+	public Integer getQtd_estoque() {
+		return qtd_estoque;
+	}
+
+	public void setQtd_estoque(Integer qtd_estoque) {
+		this.qtd_estoque = qtd_estoque;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
+//	public Byte getImagem() {
+//		return imagem;
+//	}
+//
+//	public void setImagem(Byte imagem) {
+//		this.imagem = imagem;
+//	}
+
+	public CategoriaEntity getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(CategoriaEntity categoria) {
+		this.categoria = categoria;
+	} 
+	
+	
+}

@@ -1,0 +1,57 @@
+package org.serratec.backand.finalWork.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
+
+import com.sun.istack.NotNull;
+
+import antlr.collections.List;
+
+@Entity
+public class CategoriaEntity {
+
+	@Id // gerando id e passando sua criação automaticamente pelo BDD
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long Id;
+
+	@NotNull
+	@Size(min = 5, max = 50)
+	private String nome;
+	
+	@NotNull
+	@Size(min = 5, max = 100)
+	private String descricao;
+	
+	@OneToMany(mappedBy = "categoria")
+	private ProdutoEntity produto;
+
+	public Long getId() {
+		return Id;
+	}
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	
+}

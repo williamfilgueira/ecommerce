@@ -1,0 +1,45 @@
+package org.serratec.backand.finalWork.DTO;
+
+import java.time.LocalDate;
+
+import javax.validation.constraints.Size;
+
+import org.serratec.backand.finalWork.models.EnderecoEntity;
+
+import com.sun.istack.NotNull;
+
+public class FuncionarioDto {
+
+	@NotNull
+	@Size(min = 10, max = 150)
+	private String email;
+
+	@NotNull
+	@Size(min = 10, max = 150)
+	private String username;
+
+	@NotNull
+	@Size(min = 10, max = 150)
+	private String senha;
+
+	@NotNull
+	@Size(min = 10, max = 150)
+	private String nome;
+
+	@NotNull
+	@Size(min = 10, max = 150)
+	private Integer cpf;
+
+	@NotNull
+	@Size(min = 11, max = 15)
+	private Integer telefone;
+
+	@NotNull
+	@Size(min = 10, max = 150)
+	private LocalDate data_nascimento;
+
+	@NotNull
+	@Size(min = 10, max = 150)
+	private EnderecoEntity enderocoId;
+	
+}
